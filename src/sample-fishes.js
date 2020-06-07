@@ -1,4 +1,4 @@
-// This is just some sample data so you don't have to think of your own!
+// some seed data for fish. Meow!
 const fishes = {
   fish1: {
     name: "Pacific Halibut",
