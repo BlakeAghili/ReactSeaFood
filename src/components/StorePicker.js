@@ -4,10 +4,10 @@ import { getFunName} from "../helpers";
 class StorePicker extends React.Component {
     myInput = React.createRef();
 
-    goToStore = event => {
+    goToStore = (event) => {
         event.preventDefault();
         const storeName = (this.myInput.current.value);
-        console.log(storeName);
+        //console.log(storeName);
         this.props.history.push(`/store/${storeName}`);
     }
 
