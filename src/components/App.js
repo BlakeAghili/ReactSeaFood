@@ -34,8 +34,6 @@ class App extends React.Component{
         base.removeBinding(this.ref);
     }
 
-
-
     addFish = (fish) => {
         console.log('adding a fish');
         // 1: Take a COPY of existing state
@@ -45,6 +43,15 @@ class App extends React.Component{
         // use built-in setState to update the state with this new copy.
         this.setState({fishes: fishesCopy});
     };
+
+    updateFish = (key, updatedFish) => {
+        // get a copy of the current state
+        const fishes = {...this.state.fishes};
+        // update the state
+        fishes[key] = updatedFish;
+        // set the new state
+        this.setState({fishes: fishes});
+    }
 
     loadSampleFishes  = () => {
       //alert('loading fish');
@@ -83,6 +90,7 @@ class App extends React.Component{
 
                 <Inventory
                     addFish = {this.addFish}
+                    updateFish = {this.updateFish}
                     loadSampleFishes = {this.loadSampleFishes}
                     fishes = {this.state.fishes}
                 />
