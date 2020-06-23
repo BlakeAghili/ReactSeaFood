@@ -10,8 +10,9 @@ export class Inventory extends React.Component{
                 {Object.keys(this.props.fishes).map(key => <EditFishForm
                     key={key}
                     index = {key}
-                    fish={this.props.fishes[key]}
-                    updateFish={this.props.updateFish}
+                    fish = {this.props.fishes[key]}
+                    updateFish = {this.props.updateFish}
+                    deleteFish = {this.props.deleteFish}
                 />)}
                 <AddFishForm addFish = {this.props.addFish}/>
                 <button onClick={this.props.loadSampleFishes}>Load Sample Data</button>
